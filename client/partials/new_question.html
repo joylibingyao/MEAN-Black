@@ -1,0 +1,20 @@
+<div class="new_q" ng-controller='new_question'>
+	<div class="container">
+		<span ng-bind='add_q_success' style='color:green'></span>
+		<h2>New Question</h2>
+		<form><!-- validation!! -------------->
+			<div>
+				<label>Question:</label>
+				<textarea ng-model='newQ.text'></textarea>
+				<span ng-bind='err_question' style='color:red'></span>
+			</div>
+			<div>
+				<label>Description(optional)</label>
+				<textarea ng-model='newQ.des'></textarea>
+			</div>
+			<button ng-click='goHome()'>Cancel</button>
+			<button type="submit" ng-click='add_question()'>Submit</button>
+		</form>
+	</div>
+
+</div>

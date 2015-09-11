@@ -1,0 +1,22 @@
+<div class="new_a" ng-controller='new_answer'>
+	<div class="container">
+		<div class="question">
+			Question:<h3 ng-bind='question[0].text'></h3>
+			<p ng-bind='question[0].des'></p>
+		</div>
+		<span style='color:green' ng-bind='answer_added'></span>
+		<form>
+			<div>
+				<label>Your answer:</label>
+				<textarea ng-model='newA.text'></textarea>
+				<span style='color:red' ng-bind='answer_failed'></span>
+			</div>
+			<div>
+				<label>Supporting details for your answer(optional)</label>
+				<textarea ng-model='newA.det'></textarea>
+			</div>
+			<button  ng-controller='new_question' ng-click='goHome()'>Cancel</button>
+			<button type="submit" ng-click='add_answer()'>Submit</button>
+		</form>
+	</div>
+</div>

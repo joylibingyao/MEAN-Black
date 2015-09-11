@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js'/></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
+
+    <script src='script.js'></script>
+    <script src='/controllers/main.js'></script>
+    <script src='/controllers/front.js'></script>
+    <script src='/controllers/new_question.js'></script>
+    <script src='/controllers/new_answer.js'></script>
+    <script src='/controllers/question.js'></script>
+    <script src='/factory/fac.js'></script>
+    <style type="text/css">
+    .eachAn{
+      border-bottom:2px dotted grey;
+    }
+    </style>
+</head>
+<body ng-app='myApp'>
+  <div class="container">
+
+    <div class="left">
+      <a href="#/main">Home</a> | <a href="#/new_question">Add a Question</a>
+    </div>
+    <div>
+      <a href="#" class="right">Logout</a>
+    </div>
+    <div ng-view=''></div> 
+  </div>
+</body>
+</html>

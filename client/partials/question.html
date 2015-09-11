@@ -1,0 +1,16 @@
+<div class="question" ng-controller='question'>
+	 <div class="container">
+	 	<div class="content" >
+	 		<h3 ng-bind='this_qu[0].text'></h3>
+	 		<span ng-bind='this_qu[0].des'></span>
+	 	</div>
+	 	<div class="answers">
+	 		<div class="eachAn" ng-repeat='ans in all_ans.answer | orderBy:["-like","-created"]'>
+	 			<p ng-bind='ans.user'></p>
+	 			<span>{{ans.text}}</span>
+	 			<p class="like" ng-bind='ans.like'></p>
+	 			<button ng-click='like(ans._id)'>Like</button>
+	 		</div>
+	 	</div>
+	 </div>
+</div>	

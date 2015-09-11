@@ -1,0 +1,24 @@
+<div class="main" ng-controller='main'>
+	<div class="container">
+		<div class="hello">
+			<h3>Hello</h3>
+			<h4 ng-bind='current_user'></h4>
+		</div>
+		<div class="search">
+			<label>Search:</label>
+			<input type="text" ng-model="filter_q" placeholder="filter">
+		</div>
+		<table class="showAll">
+			<thead>
+				<td>Questions</td>
+				<td>Answers</td>
+				<td>Action</td>
+			</thead>
+			<tr ng-repeat=' que in ques | filter:filter_q | orderBy:"- created "'>
+				<td ng-bind='que.text'></td>
+				<td ng-bind='que.answer.length'></td>
+				<td><span  style='text-decoration: underline;color:blue' ng-click='goQuestion(que._id)'>Show</span>  <span style='text-decoration: underline;color:blue' ng-click='answerQuestion(que._id)'>Answer</span></td>
+			</tr>
+		</table>
+	</div>
+</div>
